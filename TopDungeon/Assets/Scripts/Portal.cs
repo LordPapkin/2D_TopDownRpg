@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Portal : Collidable
+public class Portal : MonoBehaviour
 {
     private GameManager gameManager;
 
-    protected override void Start()
-    {
-        base.Start();
+    private void Start()
+    {      
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
-    protected override void OnCollide(Collider2D coll)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (coll.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             gameManager.NextLevel();
         }

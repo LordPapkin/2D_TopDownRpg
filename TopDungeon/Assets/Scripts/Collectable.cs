@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectable : Collidable
+public class Collectable : MonoBehaviour
 {
     //Logic
     protected bool collected;
 
-    protected override void OnCollide(Collider2D coll)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (coll.CompareTag("Player") == true)
+        if (collision.CompareTag("Player"))
         {
             OnCollect();
         }
