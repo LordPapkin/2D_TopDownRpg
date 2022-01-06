@@ -2923,6 +2923,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5844b4f45092c454ca591b9d3d9b2f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSprites: []
+  weaponSprites: []
+  weaponPrices: 
+  xpTable: 
+  gold: 0
+  exp: 0
 --- !u!1 &1460129167
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,18 +5952,6 @@ PrefabInstance:
     - target: {fileID: 782653166872074580, guid: 401c54806c2e67c44a7b4f3d9a52fd3a, type: 3}
       propertyPath: m_Name
       value: TresureChest
-      objectReference: {fileID: 0}
-    - target: {fileID: 782653166872074583, guid: 401c54806c2e67c44a7b4f3d9a52fd3a, type: 3}
-      propertyPath: m_Size.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 782653166872074583, guid: 401c54806c2e67c44a7b4f3d9a52fd3a, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.12151301
-      objectReference: {fileID: 0}
-    - target: {fileID: 782653166872074583, guid: 401c54806c2e67c44a7b4f3d9a52fd3a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 401c54806c2e67c44a7b4f3d9a52fd3a, type: 3}

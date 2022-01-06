@@ -12,6 +12,7 @@ public class Chest : Collectable
         {
             collected = true;
             GetComponent<SpriteRenderer>().sprite = emptyChest;
+            GameManager.instance.gold += gold;
             Debug.Log("You got " + gold + " gold coins");
         }
     }
