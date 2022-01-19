@@ -25,20 +25,24 @@ public class GameManager : MonoBehaviour
     public List<int> weaponPrices;
     public List<int> xpTable;
 
+    //References
+    public Player player;
+    public FloatingTextManager floatingTextManager;
+
     //logic
     public int gold;
     public int exp;    
 
     private void Start()
     {
-        sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;        
     }
     public void RestartLevel()
     {
         SceneManager.LoadScene(sceneIndex);
     }
     public void NextLevel()
-    {
+    {        
         SaveState();
         if (SceneManager.sceneCountInBuildSettings > sceneIndex + 1)
         {
@@ -71,5 +75,12 @@ public class GameManager : MonoBehaviour
         //Change the weapon level
 
         Debug.Log("Load");
+    }
+
+
+    //Floating text;
+    public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
+    {
+        floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
     }
 }
