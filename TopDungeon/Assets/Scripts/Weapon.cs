@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    //damage
-    public int damage = 1;
-    public float pushForce = 2.0f;
+    [Header("Weapon Dmg Settings")]
+    public int[] damage = {1,2,3,4,5,6,7,8};
+    public float[] pushForce = { 1f, 1.5f, 1.8f, 2f, 2.2f, 2.4f, 2.6f, 2.8f };
 
-    //upgrade
+    [Header("Weapon Upgrade Settings")]
     public int weaponLevel = 0;
     private SpriteRenderer spriteRenderer;
 
-    //Swing
-    private float cooldown = 0.5f;
+    [Header("Weapon Swing Settings")]
+    private float cooldown = 0.3f;
     private float lastSwing;
+    private Animator animator;
 
 
     private void Start()
-    {
+    {        
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];
     }
 
     private void Update()
@@ -34,17 +37,25 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision != null)
+        if(collision.collider.CompareTag("Enemy"))
         {
             Debug.Log(collision.collider.name);
+            Damage dmg = new Damage(transform.position, damage[weaponLevel], pushForce[weaponLevel]);
+            collision.collider.SendMessage("TakeDamage", dmg);
         }
     }
 
     private void Swing()
     {
-        Debug.Log("Swing");
+        animator.SetTrigger("Swing");
     }
 
+    public void UpgradeWeapon()
+    {
+        weaponLevel++;
+        spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];
+       
+    }
 }
