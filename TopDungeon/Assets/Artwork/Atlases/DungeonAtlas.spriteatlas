@@ -94,6 +94,8 @@ SpriteAtlas:
   - {fileID: 5955329061760485876, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: 1892149534724688357, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: 772051552652778550, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
+  - {fileID: 444169483211416405, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
+  - {fileID: 7348000187133436936, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: 1645464791298931044, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: -7379956545844754435, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: 8079169831653568495, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
@@ -101,9 +103,11 @@ SpriteAtlas:
   - {fileID: 3150387745278999259, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: -7833081434177963002, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: 3210994475073176143, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
+  - {fileID: -5686211146468202332, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: 4415742582785795081, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: 1647805384965423937, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: 5127364165165817451, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
+  - {fileID: -5192769841606136664, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: 9155170950087369235, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: 373023108217249310, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
   - {fileID: 4122923815760860928, guid: 688d44cedabfc9f43a6c1bc470946e29, type: 3}
@@ -177,6 +181,8 @@ SpriteAtlas:
   - pillar1_1
   - pillar1_0
   - pillar1_2
+  - fireball_1
+  - fireball_0
   - bigchest_1
   - bigchest_0
   - tresurechest_1
@@ -185,8 +191,10 @@ SpriteAtlas:
   - tresurechest_2
   - bighealfountain_2
   - pillar2_2
+  - pillar2_3
   - pillar2_0
   - pillar2_1
+  - boss_0
   - sword_3
   - sword_2
   - sword_1

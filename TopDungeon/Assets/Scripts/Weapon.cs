@@ -19,9 +19,9 @@ public class Weapon : MonoBehaviour
 
 
     private void Start()
-    {        
-        spriteRenderer = GetComponent<SpriteRenderer>();
+    {
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();        
         spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];
     }
 
@@ -55,7 +55,6 @@ public class Weapon : MonoBehaviour
     public void UpgradeWeapon()
     {
         weaponLevel++;
-        spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];
-       
+        spriteRenderer.sprite = GameManager.instance.weaponSprites[weaponLevel];       
     }
 }

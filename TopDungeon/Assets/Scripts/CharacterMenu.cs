@@ -48,6 +48,11 @@ public class CharacterMenu : MonoBehaviour
         characterSelectionSprite.sprite = GameManager.instance.playerSprites[currentCharacterSelection];
         GameManager.instance.player.ChangeSprite(currentCharacterSelection);
     }
+    private void OnUpdateChange()
+    {
+        characterSelectionSprite.sprite = GameManager.instance.playerSprites[GameManager.instance.player.spirte_number];
+        currentCharacterSelection = GameManager.instance.player.spirte_number;
+    }
     //Weapon Upgrade
     public void OnUpgradeClick()
     {
@@ -59,6 +64,9 @@ public class CharacterMenu : MonoBehaviour
     // Update the character Information
     public void UpdateMenu()
     {
+        //skin
+        OnUpdateChange();
+
         //Weapon
         weaponSprite.sprite = GameManager.instance.weaponSprites[GameManager.instance.weapon.weaponLevel];
         if(GameManager.instance.weapon.weaponLevel < 7)

@@ -12,6 +12,11 @@ public class CameraController : MonoBehaviour
     private float deltaY;
     Vector3 delta;
 
+    private void Start()
+    {
+        lookAt = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     private void LateUpdate()
     {
         delta = Vector3.zero;

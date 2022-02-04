@@ -59,8 +59,7 @@ public class GameManager : MonoBehaviour
     public void SaveState()
     {
         string save = "";
-        //save += player.spirte_number.ToString() + "|";
-        save += 0 + "|";
+        save += player.spirte_number.ToString() + "|";        
         save += gold.ToString() + "|";
         save += exp.ToString() + "|";
         save += level.ToString() + "|";
@@ -76,7 +75,7 @@ public class GameManager : MonoBehaviour
             return;
         string[] data = PlayerPrefs.GetString("Save").Split('|');
 
-        //player.ChangeSprite(int.Parse(data[0]));
+        player.spirte_number = int.Parse(data[0]);
         gold = int.Parse(data[1]);
         exp = int.Parse(data[2]);
         level = int.Parse(data[3]);
@@ -84,6 +83,8 @@ public class GameManager : MonoBehaviour
         player.maxHealth = int.Parse(data[5]);
         weapon.weaponLevel = int.Parse(data[6]);
         Debug.Log("Load");
+
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 
     //Floating text;

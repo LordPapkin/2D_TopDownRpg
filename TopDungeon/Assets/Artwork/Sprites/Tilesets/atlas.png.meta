@@ -172,7 +172,7 @@ TextureImporter:
     second: pillar2_1
   - first:
       213: 4415742582785795081
-    second: pillar2_2
+    second: pillar2_3
   - first:
       213: 7893001046947803066
     second: baner_1
@@ -248,6 +248,18 @@ TextureImporter:
   - first:
       213: -533251081174709349
     second: enemy_1
+  - first:
+      213: 3997552598037002181
+    second: pillar2_3
+  - first:
+      213: -5192769841606136664
+    second: boss_0
+  - first:
+      213: 444169483211416405
+    second: fireball_1
+  - first:
+      213: 7348000187133436936
+    second: fireball_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1492,7 +1504,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pillar2_2
+      name: pillar2_3
       rect:
         serializedVersion: 2
         x: 208
@@ -2054,6 +2066,90 @@ TextureImporter:
       bones: []
       spriteID: b9b0d7a87f28998f0800000000000000
       internalID: -533251081174709349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pillar2_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c77fe078e82a7730800000000000000
+      internalID: 3997552598037002181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_0
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 48
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac64be67539fe7b0800000000000000
+      internalID: -5192769841606136664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireball_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553a2eaaac10a2600800000000000000
+      internalID: 444169483211416405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireball_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804a7932d3759f560800000000000000
+      internalID: 7348000187133436936
       vertices: []
       indices: 
       edges: []

@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyHitbox : MonoBehaviour
 {
     [Header("Dmg Settings")]
-    public int damage;
-    public float pushForce;
+    [SerializeField] private int damage;
+    [SerializeField] private float pushForce;
 
     private void OnCollisionStay2D(Collision2D collision)
     {

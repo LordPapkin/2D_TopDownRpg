@@ -19,15 +19,16 @@ public class Player : Killable
     private float y;
 
     private SpriteRenderer spriteRenderer;
-    public int spirte_number;
+    public int spirte_number = 0;
 
     private void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = GameManager.instance.playerSprites[spirte_number];
-               
+        spriteRenderer.sprite = GameManager.instance.playerSprites[spirte_number];        
+        HealthBar.instance.UpdateHealthBar();
+        DontDestroyOnLoad(this);
     }
     private void Update()
     {
@@ -67,8 +68,10 @@ public class Player : Killable
     {
         Debug.Log("level up");
         maxHealth += 5;
-        currentHealth = maxHealth;
-        
+        currentHealth = maxHealth;        
+        HealthBar.instance.UpdateHealthBar();
+        GameManager.instance.ShowText("Level Up!", 30, Color.magenta, transform.position, Vector3.up * 30, 1.5f);
+
     }
 
     private void Flip()
@@ -79,5 +82,17 @@ public class Player : Killable
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    protected override void TakeDamage(Damage dmg)
+    {
+        base.TakeDamage(dmg);
+        HealthBar.instance.UpdateHealthBar();
+    }
+    public void Heal(int healingAmount)
+    {
+        currentHealth += healingAmount;
+        HealthBar.instance.UpdateHealthBar();
+        GameManager.instance.ShowText("+" + healingAmount, 30, Color.green, transform.position, Vector3.up * 30, 0.7f);
     }
 }

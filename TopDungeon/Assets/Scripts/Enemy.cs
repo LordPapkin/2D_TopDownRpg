@@ -9,14 +9,14 @@ public class Enemy : Moveable
 
 
     [Header("Logic Settings")]
-    public float triggerLenght = 1;
-    public float chaseLenght = 5;
-    public bool chasing;
-    private bool collidingWithPlayer;
+    [SerializeField] private float triggerLenght = 1;
+    [SerializeField] private float chaseLenght = 5;
+    [SerializeField] private bool chasing;
+    [SerializeField] private bool collidingWithPlayer;
 
-    private Transform playerTransform;
-    private Vector3 startingPosition;
-    private float reachedPosition = 0.2f;
+    protected Transform playerTransform;
+    protected Vector3 startingPosition;
+    [SerializeField] protected float reachedPosition = 0.2f;
     
 
     //Hitbox

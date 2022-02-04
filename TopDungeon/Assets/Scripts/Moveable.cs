@@ -6,11 +6,11 @@ public class Moveable : Killable
 {
     protected BoxCollider2D boxCollider;
     protected Rigidbody2D rb;
-    protected Vector2 moveDelta;   
-       
-    private bool facingRight = true;
+    protected Vector2 moveDelta;          
+    
     [Header("Speed Settings")]
     public float enemySpeed = 2f;
+    [SerializeField] private bool facingRight = true;
 
     protected virtual void Start()
     {
